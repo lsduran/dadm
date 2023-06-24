@@ -12,7 +12,12 @@ class IntentExplicitoFirstActivity : AppCompatActivity() {
 
     private val register = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if(result.resultCode == RESULT_OK) {
-            Toast.makeText(this, "resultCode = ${result.resultCode} ${result.data?.getStringExtra("EXTRA_FIRSTNAME")} ${result.data?.getStringExtra("EXTRA_LASTNAME")} ${result.data?.getStringExtra("EXTRA_AGE")} ", Toast.LENGTH_SHORT).show()
+            if(result.data?.getBooleanExtra("EXTRA_BACK_HOME", false) == true) {
+                Toast.makeText(this, "Volviendo a Home...", Toast.LENGTH_SHORT).show()
+                onBackPressedDispatcher.onBackPressed()
+            } else {
+                Toast.makeText(this, "resultCode = ${result.resultCode} ${result.data?.getStringExtra("EXTRA_FIRSTNAME")} ${result.data?.getStringExtra("EXTRA_LASTNAME")} ${result.data?.getStringExtra("EXTRA_AGE")} ", Toast.LENGTH_SHORT).show()
+            }
         } else {
             Toast.makeText(this, "resultCode = ${result.resultCode} - CANCELLED", Toast.LENGTH_SHORT).show()
         }

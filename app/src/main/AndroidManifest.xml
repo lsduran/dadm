@@ -13,11 +13,8 @@
         android:theme="@style/Theme.DADM"
         tools:targetApi="31">
         <activity
-            android:name=".modulo4.ejercicios.ejercicio1.IntentExplicitoSecondActivity"
-            android:exported="false" />
-        <activity
-            android:name=".modulo4.ejercicios.ejercicio1.IntentExplicitoFirstActivity"
-            android:exported="true" >
+            android:name=".modulo4.sesion20230623.componentesgraficos.RelativeActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,9 +22,24 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".modulo4.ejercicios.ejercicio1.IntentImplicitoActivity"
+            android:name=".modulo4.sesion20230623.componentesgraficos.LinearActivity"
             android:exported="false">
         </activity>
+        <activity
+            android:name=".modulo4.sesion20230623.componentesgraficos.FrameActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".modulo4.sesion20230623.HomeActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".modulo4.ejercicios.ejercicio1.IntentExplicitoSecondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".modulo4.ejercicios.ejercicio1.IntentExplicitoFirstActivity"
+            android:exported="false"></activity>
+        <activity
+            android:name=".modulo4.ejercicios.ejercicio1.IntentImplicitoActivity"
+            android:exported="false"></activity>
         <activity
             android:name=".modulo4.ejercicios.ejercicio1.CicloDeVidaActivity"
             android:exported="false" />
