@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".modulo4.ejercicios.ejercicio2.MultipleViewsActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glStart"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="30dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glEnd"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="30dp"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@android:color/holo_orange_light"
+        android:text="Múltiples views"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/ivUser"
+        android:src="@mipmap/ic_account"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintEnd_toEndOf="@+id/glEnd" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Introduzca el nombre del contenido"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintEnd_toEndOf="@+id/glEnd"
+        app:layout_constraintTop_toBottomOf="@+id/ivUser" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toEndOf="@+id/glEnd"/>
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Tipo"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintEnd_toEndOf="@+id/glEnd"
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+    <RadioGroup
+        android:id="@+id/rgType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@+id/tvType">
+
+        <RadioButton
+            android:id="@+id/rbMovie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Película" />
+
+        <RadioButton
+            android:id="@+id/rbSeries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Serie" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvPlatforms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Seleccione las plataformas en donde se encuentra"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintEnd_toEndOf="@+id/glEnd"
+        app:layout_constraintTop_toBottomOf="@+id/rgType" />
+
+    <CheckBox
+        android:id="@+id/cbPlataform1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Plataforma 1"
+        app:layout_constraintStart_toStartOf="@+id/glStart"
+        app:layout_constraintEnd_toStartOf="@+id/cbPlataform2"
+        app:layout_constraintTop_toBottomOf="@+id/tvPlatforms" />
+
+    <CheckBox
+        android:id="@+id/cbPlataform2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Plataforma 2"
+        app:layout_constraintStart_toEndOf="@+id/cbPlataform1"
+        app:layout_constraintEnd_toStartOf="@+id/cbPlataform3"
+        app:layout_constraintTop_toTopOf="@+id/cbPlataform1" />
+
+    <CheckBox
+        android:id="@+id/cbPlataform3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Plataforma 3"
+        app:layout_constraintStart_toEndOf="@+id/cbPlataform2"
+        app:layout_constraintEnd_toStartOf="@+id/glEnd"
+        app:layout_constraintTop_toTopOf="@+id/cbPlataform2" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        android:textAllCaps="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        app:layout_constraintStart_toEndOf="@+id/glStart"
+        app:layout_constraintEnd_toStartOf="@+id/btnDelete"
+        app:layout_constraintTop_toBottomOf="@+id/cbPlataform1" />
+
+    <ImageButton
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@mipmap/ic_delete"
+        app:layout_constraintTop_toTopOf="@id/btnSave"
+        app:layout_constraintStart_toEndOf="@+id/btnSave"
+        app:layout_constraintEnd_toStartOf="@+id/glEnd"
+        app:layout_constraintBottom_toBottomOf="@id/btnSave"/>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volver"
+        android:textAllCaps="true"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSave" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".modulo4.ejercicios.ejercicio2.FrameLayoutActivity">
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/holo_orange_light"
+        android:text="FrameLayout"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"/>
+    
+    <EditText
+        android:id="@+id/etFrameName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Entrada de texto tipo número"
+        android:inputType="number"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volver"
+        android:textAllCaps="true"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="50dp"/>
+
+</FrameLayout>
