@@ -31,12 +31,23 @@
         android:id="@+id/tvType"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
+        android:layout_marginStart="30dp"
         android:hint="Tipo"
         app:layout_constraintStart_toEndOf="@+id/imgCover"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvCategory"
         app:layout_constraintTop_toBottomOf="@+id/tvName"
         app:layout_constraintBottom_toTopOf="@+id/tvPlatforms" />
+
+    <TextView
+        android:id="@+id/tvCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:hint="Categoría"
+        app:layout_constraintStart_toEndOf="@+id/tvType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvType"
+        app:layout_constraintBottom_toBottomOf="@+id/tvType" />
 
     <TextView
         android:id="@+id/tvPlatforms"

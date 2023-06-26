@@ -25,11 +25,13 @@ class ContentViewHolder(view: View) : RecyclerView.ViewHolder(view){
     val tvName = view.findViewById<TextView>(R.id.tvName)
     val tvType = view.findViewById<TextView>(R.id.tvType)
     val tvPlatforms = view.findViewById<TextView>(R.id.tvPlatforms)
+    val tvCategory = view.findViewById<TextView>(R.id.tvCategory)
 
     fun render(content: Content) {
         tvName.text = content.Name
         tvType.text = content.Type
         tvPlatforms.text = content.Platforms.joinToString(", ")
+        tvCategory.text = content.Category
     }
 
 }

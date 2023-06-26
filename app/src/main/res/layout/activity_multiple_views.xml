@@ -6,163 +6,197 @@
     android:layout_height="match_parent"
     tools:context=".modulo4.ejercicios.ejercicio2.MultipleViewsActivity">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/glStart"
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintGuide_begin="30dp"/>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true" >
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/glEnd"
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintGuide_end="30dp"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
 
-    <TextView
-        android:id="@+id/tvTitle"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:background="@android:color/holo_orange_light"
-        android:text="Múltiples views"
-        android:gravity="center"/>
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glStart"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_begin="30dp"/>
 
-    <ImageView
-        android:id="@+id/ivUser"
-        android:src="@mipmap/ic_account"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
-        app:layout_constraintStart_toStartOf="@+id/glStart"
-        app:layout_constraintEnd_toEndOf="@+id/glEnd" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glEnd"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_end="30dp"/>
 
-    <TextView
-        android:id="@+id/tvName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Introduzca el nombre del contenido"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="@+id/glStart"
-        app:layout_constraintEnd_toEndOf="@+id/glEnd"
-        app:layout_constraintTop_toBottomOf="@+id/ivUser" />
+            <TextView
+                android:id="@+id/tvTitle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:background="@android:color/holo_orange_light"
+                android:text="Múltiples views"
+                android:gravity="center"/>
 
-    <EditText
-        android:id="@+id/etName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Nombre"
-        app:layout_constraintTop_toBottomOf="@id/tvName"
-        app:layout_constraintStart_toStartOf="@id/glStart"
-        app:layout_constraintEnd_toEndOf="@+id/glEnd"/>
+            <ImageView
+                android:id="@+id/ivUser"
+                android:src="@mipmap/ic_account"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintEnd_toEndOf="@+id/glEnd" />
 
-    <TextView
-        android:id="@+id/tvType"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Tipo"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="@+id/glStart"
-        app:layout_constraintEnd_toEndOf="@+id/glEnd"
-        app:layout_constraintTop_toBottomOf="@+id/etName" />
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Introduzca el nombre del contenido"
+                android:layout_marginTop="30dp"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintEnd_toEndOf="@+id/glEnd"
+                app:layout_constraintTop_toBottomOf="@+id/ivUser" />
 
-    <RadioGroup
-        android:id="@+id/rgType"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@id/glEnd"
-        app:layout_constraintStart_toStartOf="@id/glStart"
-        app:layout_constraintTop_toBottomOf="@+id/tvType">
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                app:layout_constraintTop_toBottomOf="@id/tvName"
+                app:layout_constraintStart_toStartOf="@id/glStart"
+                app:layout_constraintEnd_toEndOf="@+id/glEnd"/>
 
-        <RadioButton
-            android:id="@+id/rbMovie"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Película" />
+            <TextView
+                android:id="@+id/tvType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Tipo"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintEnd_toEndOf="@+id/glEnd"
+                app:layout_constraintTop_toBottomOf="@+id/etName" />
 
-        <RadioButton
-            android:id="@+id/rbSeries"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Serie" />
+            <RadioGroup
+                android:id="@+id/rgType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@id/glEnd"
+                app:layout_constraintStart_toStartOf="@id/glStart"
+                app:layout_constraintTop_toBottomOf="@+id/tvType">
 
-    </RadioGroup>
+                <RadioButton
+                    android:id="@+id/rbMovie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Película" />
 
-    <TextView
-        android:id="@+id/tvPlatforms"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Seleccione las plataformas en donde se encuentra"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="@+id/glStart"
-        app:layout_constraintEnd_toEndOf="@+id/glEnd"
-        app:layout_constraintTop_toBottomOf="@+id/rgType" />
+                <RadioButton
+                    android:id="@+id/rbSeries"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Serie" />
 
-    <CheckBox
-        android:id="@+id/cbPlataform1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Plataforma 1"
-        app:layout_constraintStart_toStartOf="@+id/glStart"
-        app:layout_constraintEnd_toStartOf="@+id/cbPlataform2"
-        app:layout_constraintTop_toBottomOf="@+id/tvPlatforms" />
+            </RadioGroup>
 
-    <CheckBox
-        android:id="@+id/cbPlataform2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Plataforma 2"
-        app:layout_constraintStart_toEndOf="@+id/cbPlataform1"
-        app:layout_constraintEnd_toStartOf="@+id/cbPlataform3"
-        app:layout_constraintTop_toTopOf="@+id/cbPlataform1" />
+            <TextView
+                android:id="@+id/tvPlatforms"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Seleccione las plataformas en donde se encuentra"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintEnd_toEndOf="@+id/glEnd"
+                app:layout_constraintTop_toBottomOf="@+id/rgType" />
 
-    <CheckBox
-        android:id="@+id/cbPlataform3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Plataforma 3"
-        app:layout_constraintStart_toEndOf="@+id/cbPlataform2"
-        app:layout_constraintEnd_toStartOf="@+id/glEnd"
-        app:layout_constraintTop_toTopOf="@+id/cbPlataform2" />
+            <CheckBox
+                android:id="@+id/cbPlataform1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Plataforma 1"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintEnd_toStartOf="@+id/glEnd"
+                app:layout_constraintTop_toBottomOf="@+id/tvPlatforms" />
 
-    <Button
-        android:id="@+id/btnSave"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Guardar"
-        android:textAllCaps="true"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="@android:color/holo_blue_dark"
-        app:layout_constraintStart_toEndOf="@+id/glStart"
-        app:layout_constraintEnd_toStartOf="@+id/btnDelete"
-        app:layout_constraintTop_toBottomOf="@+id/cbPlataform1" />
+            <CheckBox
+                android:id="@+id/cbPlataform2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Plataforma 2"
+                app:layout_constraintStart_toEndOf="@+id/glStart"
+                app:layout_constraintEnd_toStartOf="@+id/glEnd"
+                app:layout_constraintTop_toBottomOf="@+id/cbPlataform1" />
 
-    <ImageButton
-        android:id="@+id/btnDelete"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:src="@mipmap/ic_delete"
-        app:layout_constraintTop_toTopOf="@id/btnSave"
-        app:layout_constraintStart_toEndOf="@+id/btnSave"
-        app:layout_constraintEnd_toStartOf="@+id/glEnd"
-        app:layout_constraintBottom_toBottomOf="@id/btnSave"/>
+            <CheckBox
+                android:id="@+id/cbPlataform3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Plataforma 3"
+                app:layout_constraintStart_toEndOf="@+id/glStart"
+                app:layout_constraintEnd_toStartOf="@+id/glEnd"
+                app:layout_constraintTop_toBottomOf="@+id/cbPlataform2" />
 
-    <Button
-        android:id="@+id/btnBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Volver"
-        android:textAllCaps="true"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSave" />
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Seleccione una categoría"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintEnd_toEndOf="@+id/glEnd"
+                app:layout_constraintTop_toBottomOf="@+id/cbPlataform3" />
+
+            <Spinner
+                android:id="@+id/spCategories"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/glStart"
+                app:layout_constraintEnd_toEndOf="@+id/glEnd"
+                app:layout_constraintTop_toBottomOf="@+id/tvCategory" />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guardar"
+                android:textAllCaps="true"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="@android:color/holo_blue_dark"
+                app:layout_constraintStart_toEndOf="@+id/glStart"
+                app:layout_constraintEnd_toStartOf="@+id/btnDelete"
+                app:layout_constraintTop_toBottomOf="@+id/spCategories" />
+
+            <ImageButton
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_delete_foreground"
+                android:backgroundTint="@android:color/holo_red_light"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:layout_constraintTop_toTopOf="@id/btnSave"
+                app:layout_constraintBottom_toBottomOf="@id/btnSave"
+                app:layout_constraintStart_toEndOf="@+id/btnSave"
+                app:layout_constraintEnd_toStartOf="@+id/glEnd"/>
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Volver"
+                android:textAllCaps="true"
+                android:layout_marginTop="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnSave" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
