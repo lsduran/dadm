@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".modulo4.sesion20230623.HomeActivity">
+    tools:context=".modulo4.ejercicios.ejercicio1.HomeActivity">
 
     <Button
         android:id="@+id/btCallFirstActivity"

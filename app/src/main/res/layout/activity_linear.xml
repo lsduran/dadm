@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".modulo4.sesion20230623.componentesgraficos.LinearActivity">
+    tools:context=".modulo4.componentesgraficos.LinearActivity">
 
     <TextView
         android:text="Componente 1"

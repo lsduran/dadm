@@ -1,11 +1,10 @@
-package com.dualser.dadm.modulo4.sesion20230623
+package com.dualser.dadm.modulo4.ejercicios.ejercicio1
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.dualser.dadm.R
-import com.dualser.dadm.modulo4.ejercicios.ejercicio1.IntentExplicitoFirstActivity
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
