@@ -5,26 +5,43 @@
     android:id="@+id/layoutPerson"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:id="@+id/imgPhoto"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:paddingVertical="10dp"
-        android:contentDescription="TODO"
-        android:src="@drawable/img_placeholder"/>
-
-    <TextView
-        android:id="@+id/tvName"
-        android:hint="Placeholder"
-        android:layout_width="0dp"
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        style="@style/RedTextView"
-        app:layout_constraintStart_toEndOf="@+id/imgPhoto"
-        app:layout_constraintBottom_toBottomOf="@+id/imgPhoto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imgPhoto" />
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgPhoto"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/img_android"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/tvName"
+                android:hint="Placeholder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                style="@style/RedTextView"
+                app:layout_constraintStart_toEndOf="@+id/imgPhoto"
+                app:layout_constraintBottom_toBottomOf="@+id/imgPhoto"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imgPhoto" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

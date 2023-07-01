@@ -3,11 +3,13 @@ package com.dualser.dadm.modulo4.componentesgraficos
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet.Constraint
 import androidx.recyclerview.widget.RecyclerView
 import com.dualser.dadm.R
+import com.squareup.picasso.Picasso
 
 class PersonAdapter(private var list: List<Person>) : RecyclerView.Adapter<PersonViewHolder>() {
 
@@ -29,11 +31,17 @@ class PersonAdapter(private var list: List<Person>) : RecyclerView.Adapter<Perso
 class PersonViewHolder(view: View) :RecyclerView.ViewHolder(view) {
     val tvName = view.findViewById<TextView>(R.id.tvName)
     val root = view.findViewById<ConstraintLayout>(R.id.layoutPerson)
+    val ivPerson = view.findViewById<ImageView>(R.id.imgPhoto)
 
     fun render(person: Person, onItemSelected: ((Person) -> Unit)?) {
         tvName.text = person.name
         root.setOnClickListener {
             onItemSelected?.invoke(person)
         }
+
+        Picasso.get().load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV6D8fJZWgcW5SpV0ZnF8XTOmCcY1C1wCRPU9LJ-MzQFMPqiPkPw87OMcIQe7IM3WQVnw&usqp=CAU")
+            .error(R.drawable.img_logo)
+            .placeholder(R.drawable.img_placeholder)
+            .into(ivPerson)
     }
 }

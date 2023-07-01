@@ -12,29 +12,29 @@ import android.widget.RadioGroup
 import android.widget.Spinner
 import android.widget.Toast
 import com.dualser.dadm.R
+import com.dualser.dadm.databinding.ActivitySelectionComponentBinding
 
 class SelectionComponentActivity : AppCompatActivity() {
+
+    private lateinit var binding : ActivitySelectionComponentBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_selection_component)
-
-        val cbCreditCard = findViewById<CheckBox>(R.id.cbCreditCard)
-        val btnSend = findViewById<Button>(R.id.btnSend)
-        val rgSex = findViewById<RadioGroup>(R.id.rgSex)
+        binding = ActivitySelectionComponentBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         // Checkbox
-        cbCreditCard.setOnCheckedChangeListener { _, isChecked ->
+        binding.cbCreditCard.setOnCheckedChangeListener { _, isChecked ->
             Toast.makeText(this, "isChecked = $isChecked", Toast.LENGTH_SHORT).show()
         }
 
         // RadioButton
-        rgSex.setOnCheckedChangeListener { view, checkedId ->
+        binding.rgSex.setOnCheckedChangeListener { view, checkedId ->
             val sex = when(checkedId) {
                 R.id.rbMan -> {
-                    cbCreditCard.visibility = View.GONE
+                    binding.cbCreditCard.visibility = View.GONE
                 }
-                R.id.rbWoman -> cbCreditCard.visibility = View.VISIBLE
-                R.id.rbOther -> cbCreditCard.visibility = View.INVISIBLE
+                R.id.rbWoman -> binding.cbCreditCard.visibility = View.VISIBLE
+                R.id.rbOther -> binding.cbCreditCard.visibility = View.INVISIBLE
                 else -> "Desconocido"
             }
             Toast.makeText(this, "$sex", Toast.LENGTH_SHORT).show()
@@ -59,11 +59,11 @@ class SelectionComponentActivity : AppCompatActivity() {
 
         }
 
-        btnSend.setOnClickListener {
+        binding.btnSend.setOnClickListener {
             // Checkbox
-            val cbStatus = cbCreditCard.isChecked
+            val cbStatus = binding.cbCreditCard.isChecked
             //RadioButton
-            val selectedSex = when(rgSex.checkedRadioButtonId) {
+            val selectedSex = when(binding.rgSex.checkedRadioButtonId) {
                 R.id.rbMan -> "H"
                 R.id.rbWoman -> "M"
                 R.id.rbOther -> "O"

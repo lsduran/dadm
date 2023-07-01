@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,7 +15,34 @@
         android:theme="@style/Theme.DADM"
         tools:targetApi="31">
         <activity
+            android:name=".modulo4.fragments.ParamsActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".modulo4.fragments.FragmentActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".modulo4.componentesgraficos.RecyclerActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".modulo4.componentesgraficos.SelectionComponentActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -59,9 +88,6 @@
             android:exported="false" />
         <activity
             android:name=".modulo4.ejercicios.ejercicio2.FrameLayoutActivity"
-            android:exported="false" />
-        <activity
-            android:name=".modulo4.componentesgraficos.SelectionComponentActivity"
             android:exported="false" />
         <activity
             android:name=".modulo4.componentesgraficos.ConstraintActivity"

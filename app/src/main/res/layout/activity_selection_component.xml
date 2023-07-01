@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutSelectionComponent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".modulo4.componentesgraficos.SelectionComponentActivity">
@@ -10,7 +11,7 @@
         android:id="@+id/cbCreditCard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="¿Cuentas con tarjeta de crédito?"
+        android:text="@string/label_has_credit_card"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,21 +29,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Hombre" />
+            android:text="@string/man" />
 
         <RadioButton
             android:id="@+id/rbWoman"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Mujer" />
+            android:text="@string/woman" />
 
         <RadioButton
             android:id="@+id/rbOther"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Otro" />
+            android:text="@string/other" />
 
     </RadioGroup>
 
@@ -59,7 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp"
-        android:text="Enviar"
+        android:text="@string/send"
         android:textAllCaps="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
