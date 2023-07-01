@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:id="@+id/layoutPerson"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
@@ -12,7 +13,7 @@
         android:layout_height="80dp"
         android:paddingVertical="10dp"
         android:contentDescription="TODO"
-        android:src="@mipmap/ic_launcher"/>
+        android:src="@drawable/img_placeholder"/>
 
     <TextView
         android:id="@+id/tvName"
@@ -20,6 +21,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
+        style="@style/RedTextView"
         app:layout_constraintStart_toEndOf="@+id/imgPhoto"
         app:layout_constraintBottom_toBottomOf="@+id/imgPhoto"
         app:layout_constraintEnd_toEndOf="parent"
