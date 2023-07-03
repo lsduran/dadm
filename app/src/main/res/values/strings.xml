@@ -1,15 +1,30 @@
 <resources>
     <string name="app_name" translatable="false">DADM</string>
+    <string name="logo" translatable="false">Logo</string>
     <!--Common-->
     <string name="next">Siguiente</string>
     <string name="back">Regresar</string>
     <string name="send">Enviar</string>
+    <string name="sex">Sexo</string>
     <string name="man">Hombre</string>
     <string name="woman">Mujer</string>
     <string name="other">Otro</string>
+    <string name="accept">Aceptar</string>
     <!--Activity Selection Component-->
     <string name="label_has_credit_card">¿Cuentas con tarjeta de crédito?</string>
     <string name="fragment_title">Ejemplo de Fragment</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Módulo 4: Proyecto -->
+    <string name="placeholder">Texto</string>
+    <string name="username">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="firstName">Nombre(s)</string>
+    <string name="lastName">Apellido(s)</string>
+    <string name="confirmPassword">Confirmar contraseña</string>
+    <string name="termsAndConditions">Acepto los términos y condiciones</string>
+    <string name="privacyPolicy">Acepto las políticas de privacidad</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="forgotPassword">Olvidé mi contraseña</string>
+    <string name="label_register">¿Aún no tienes una cuenta?</string>
+    <string name="create_account">Crea una cuenta</string>
 </resources>

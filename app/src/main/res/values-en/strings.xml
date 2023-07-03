@@ -4,10 +4,26 @@
     <string name="next">Next</string>
     <string name="back">Back</string>
     <string name="send">Send</string>
+    <string name="sex">Sex</string>
     <string name="man">Man</string>
     <string name="woman">Woman</string>
     <string name="other">Other</string>
+    <string name="accept">Accept</string>
     <!--Activity Selection Component-->
     <string name="label_has_credit_card">Do you have a credit card?</string>
     <string name="fragment_title">Fragment example</string>
+
+    <!-- Módulo 4: Proyecto -->
+    <string name="placeholder">Placeholder</string>
+    <string name="username">Email</string>
+    <string name="password">Password</string>
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="termsAndConditions">I agree with Terms &amp; Conditions</string>
+    <string name="privacyPolicy">I agree with the Privacy Policy</string>
+    <string name="login">Log In</string>
+    <string name="forgotPassword">Forgot my password</string>
+    <string name="label_register">You don\'t have an account</string>
+    <string name="create_account">Create an account</string>
 </resources>

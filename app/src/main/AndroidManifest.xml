@@ -15,6 +15,18 @@
         android:theme="@style/Theme.DADM"
         tools:targetApi="31">
         <activity
+            android:name=".DashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".modulo4.proyecto.activities.InitActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".modulo4.fragments.ParamsActivity"
             android:exported="true">
             <intent-filter>

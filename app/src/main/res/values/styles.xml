@@ -6,4 +6,25 @@
         <item name="android:textColorHint">@color/blue</item>
         <item name="fontFamily">@font/bernier_shade_regular</item>
     </style>
+
+    <style name="StaticText" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:hint">@string/placeholder</item>
+    </style>
+
+    <style name="ActionText" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@android:color/holo_blue_dark</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TitleText" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:background">@android:color/holo_blue_bright</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
 </resources>
