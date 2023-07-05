@@ -1,32 +1,49 @@
 package com.dualser.dadm.modulo4.proyecto.fragments
 
+import android.content.Intent
 import android.os.Bundle
+import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RadioButton
+import android.widget.Toast
 import com.dualser.dadm.R
+import com.dualser.dadm.databinding.FragmentLoginBinding
+import com.dualser.dadm.databinding.FragmentRegisterBinding
+import com.dualser.dadm.modulo4.proyecto.activities.DashboardActivity
+import com.dualser.dadm.modulo4.proyecto.models.User
+import com.dualser.dadm.modulo4.proyecto.models.Validation
+import com.dualser.dadm.modulo4.tarea.RegisterActivity
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+private const val EXTRA_USER = "EXTRA_USER"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [RegisterFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class RegisterFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+class RegisterFragment : Fragment(R.layout.fragment_register) {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+    private lateinit var binding: FragmentRegisterBinding
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = FragmentRegisterBinding.bind(view)
+
+        binding.btnRegister.setOnClickListener {
+            val validate = validInputs()
+            if ( validate.valid ) {
+                val user = User(
+                    firstName = binding.etFirstName.text.toString(),
+                    lastName = binding.etLastName.text.toString(),
+                    username = binding.etUsername.text.toString(),
+                    sex = (view.findViewById<View>(binding.rgSex.checkedRadioButtonId) as RadioButton).text.toString()
+                )
+                val dashboardIntent = Intent(requireContext(), DashboardActivity::class.java).apply {
+                    putExtra(EXTRA_USER, user)
+                }
+                startActivity(dashboardIntent)
+                activity?.finish()
+            } else {
+                Toast.makeText(requireContext(), validate.message, Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
@@ -39,22 +56,52 @@ class RegisterFragment : Fragment() {
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment RegisterFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            RegisterFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+        fun newInstance() = RegisterFragment()
+    }
+
+    private fun validInputs(): Validation {
+        if (TextUtils.isEmpty(binding.etFirstName.text)) {
+            return Validation(false, getString(R.string.register_firstname_empty))
+        }
+
+        if (TextUtils.isEmpty(binding.etLastName.text)) {
+            return Validation(false, getString(R.string.register_lastname_empty))
+        }
+
+        if (TextUtils.isEmpty(binding.etUsername.text)) {
+            return Validation(false, getString(R.string.register_username_empty))
+        }
+
+        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(binding.etUsername.text.toString()).matches()) {
+            return Validation(false, getString(R.string.register_username_invalid))
+        }
+
+        val selectedId: Int = binding.rgSex.checkedRadioButtonId
+        if (selectedId == -1) {
+            return Validation(false, getString(R.string.register_sex_empty))
+        }
+
+        if (TextUtils.isEmpty(binding.etPassword.text)) {
+            return Validation(false, getString(R.string.register_password_empty))
+        }
+
+        if (binding.etPassword.text.length < 8) {
+            return Validation(false, getString(R.string.register_password_invalid))
+        }
+
+        if (binding.etPasswordConfirm.text.toString() != binding.etPassword.text.toString()) {
+            return Validation(false, getString(R.string.register_confirm_password_no_match))
+        }
+
+        if (!binding.cbTermsAndConditions.isChecked) {
+            return Validation(false, getString(R.string.register_terms_and_cond_accept))
+        }
+
+        if (!binding.cbPrivacyPolicy.isChecked) {
+            return Validation(false, getString(R.string.register_privacy_policy_accept))
+        }
+
+        return Validation(true, getString(R.string.register_success))
     }
 }

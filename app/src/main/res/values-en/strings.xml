@@ -26,4 +26,19 @@
     <string name="forgotPassword">Forgot my password</string>
     <string name="label_register">You don\'t have an account</string>
     <string name="create_account">Create an account</string>
+    <string name="login_username_empty">Enter your email</string>
+    <string name="login_password_empty">Enter your password</string>
+    <string name="login_success">Logged in successfully</string>
+    <string name="login_password_wrong">Your password is 12345678</string>
+    <string name="register_firstname_empty">Enter your first name</string>
+    <string name="register_lastname_empty">Enter your last name</string>
+    <string name="register_username_empty">Enter your email</string>
+    <string name="register_username_invalid">Enter a valid email address</string>
+    <string name="register_sex_empty">Select your sex</string>
+    <string name="register_password_empty">Enter a password</string>
+    <string name="register_password_invalid">Your password should have 8 characters at least</string>
+    <string name="register_confirm_password_no_match">Confirm your password. Your password does not match</string>
+    <string name="register_terms_and_cond_accept">You must accept the Terms &amp; Conditions</string>
+    <string name="register_privacy_policy_accept">You must accept the Privacy Policy</string>
+    <string name="register_success">You have registered successfully</string>
 </resources>

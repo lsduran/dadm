@@ -27,4 +27,19 @@
     <string name="forgotPassword">Olvidé mi contraseña</string>
     <string name="label_register">¿Aún no tienes una cuenta?</string>
     <string name="create_account">Crea una cuenta</string>
+    <string name="login_username_empty">Introduzca su correo electrónico</string>
+    <string name="login_password_empty">Introduzca su contraseña</string>
+    <string name="login_success">Ha iniciado sesión exitosamente</string>
+    <string name="login_password_wrong">Su contraseña es 12345678</string>
+    <string name="register_firstname_empty">Introduzca su nombre</string>
+    <string name="register_lastname_empty">Introduzca su apellido</string>
+    <string name="register_username_empty">Introduzca su correo electrónico</string>
+    <string name="register_username_invalid">Introduzca un correo electrónico válido</string>
+    <string name="register_sex_empty">Seleccione su sexo</string>
+    <string name="register_password_empty">Introduzca una contraseña</string>
+    <string name="register_password_invalid">La contraseña debe contener al menos 8 caracteres</string>
+    <string name="register_confirm_password_no_match">Confirme su contraseña. La contraseña no coincide</string>
+    <string name="register_terms_and_cond_accept">Debe aceptar los términos y condiciones</string>
+    <string name="register_privacy_policy_accept">Debe aceptar las Políticas de privacidad</string>
+    <string name="register_success">Se ha registrado correctamente</string>
 </resources>
