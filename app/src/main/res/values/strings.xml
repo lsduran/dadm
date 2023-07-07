@@ -10,6 +10,9 @@
     <string name="woman">Mujer</string>
     <string name="other">Otro</string>
     <string name="accept">Aceptar</string>
+    <string name="movies">Películas</string>
+    <string name="profile">Perfil</string>
+    <string name="not_selected">Sin selección</string>
     <!--Activity Selection Component-->
     <string name="label_has_credit_card">¿Cuentas con tarjeta de crédito?</string>
     <string name="fragment_title">Ejemplo de Fragment</string>
@@ -42,4 +45,8 @@
     <string name="register_terms_and_cond_accept">Debe aceptar los términos y condiciones</string>
     <string name="register_privacy_policy_accept">Debe aceptar las Políticas de privacidad</string>
     <string name="register_success">Se ha registrado correctamente</string>
+    <string name="logged_in_as">Ha iniciado sesión como %s</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="logged_out">Ha cerrado su sesión correctamente</string>
+    <string name="data_updated">Su información se ha actualizado</string>
 </resources>

@@ -9,6 +9,9 @@
     <string name="woman">Woman</string>
     <string name="other">Other</string>
     <string name="accept">Accept</string>
+    <string name="movies">Movies</string>
+    <string name="profile">Profile</string>
+    <string name="not_selected">Not selected</string>
     <!--Activity Selection Component-->
     <string name="label_has_credit_card">Do you have a credit card?</string>
     <string name="fragment_title">Fragment example</string>
@@ -24,7 +27,7 @@
     <string name="privacyPolicy">I agree with the Privacy Policy</string>
     <string name="login">Log In</string>
     <string name="forgotPassword">Forgot my password</string>
-    <string name="label_register">You don\'t have an account</string>
+    <string name="label_register">You don\'t have an account?</string>
     <string name="create_account">Create an account</string>
     <string name="login_username_empty">Enter your email</string>
     <string name="login_password_empty">Enter your password</string>
@@ -41,4 +44,8 @@
     <string name="register_terms_and_cond_accept">You must accept the Terms &amp; Conditions</string>
     <string name="register_privacy_policy_accept">You must accept the Privacy Policy</string>
     <string name="register_success">You have registered successfully</string>
+    <string name="logged_in_as">You have logged in as %s</string>
+    <string name="logout">Log out</string>
+    <string name="logged_out">You have logged out successfully</string>
+    <string name="data_updated">Your data has been updated</string>
 </resources>

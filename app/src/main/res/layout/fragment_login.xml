@@ -29,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/img_logo"/>
+        android:src="@drawable/img_proyecto"/>
 
     <TextView
         android:id="@+id/tvUsername"
